@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM eclipse-temurin:8u312-b07-jdk-focal
 
 RUN         apt update \
             && apt install git php8 \
