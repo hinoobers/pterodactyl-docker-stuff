@@ -1,6 +1,8 @@
 FROM eclipse-temurin:8u312-b07-jdk-focal
 
 RUN         apt update \
+            && apt install software-properties-common \
+            && add-apt-repository ppa:ondrej/php \
             && apt install git php8.1 \
             && apt clean
             
