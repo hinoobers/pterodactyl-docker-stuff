@@ -13,4 +13,4 @@ ENV HOME /home/container
 WORKDIR /home/container
 
 COPY        ./nginx/entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/ash", "/entrypoint.sh" ]
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
