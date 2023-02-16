@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM openjdk:8-jdk-alpine
 
 RUN         apt-get update \
             && apt-get -y install --no-install-recommends git php8 \
