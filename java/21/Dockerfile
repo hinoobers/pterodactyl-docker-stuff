@@ -16,10 +16,10 @@ RUN apt-get update && apt-get install -y \
         tini \
         unzip \
         libglib2.0-0 \
-        libnss3 \
-        snap
-RUN snap install firefox
+        libnss3 
 
+RUN add-apt-repository ppa:mozillateam/ppa
+RUN apt-get install -y firefox-esr
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux-aarch64.tar.gz && \
     tar -xzf geckodriver-v0.33.0-linux-aarch64.tar.gz && \
     mv geckodriver /usr/bin/geckodriver && \
