@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
         tini \
         unzip \
         libglib2.0-0 \
-        libnss3
+        libnss3 \
+        chromium-browser
 
 # Download and install Chromedriver
 RUN mkdir -p /tmp/chromedriver \
