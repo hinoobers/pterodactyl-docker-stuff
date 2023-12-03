@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
         libfreetype6 \
         tini \
         unzip \
-        libglib2.0-0
+        libglib2.0-0 \
+        libnss3
 
 # Download and install Chromedriver
 RUN mkdir -p /tmp/chromedriver \
