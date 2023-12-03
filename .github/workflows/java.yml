@@ -10,7 +10,7 @@ on:
       - java/**
 jobs:
   push:
-    name: "pterodactyl-docker-stuff:java_${{ matrix.tag }}"
+    name: "yolks:java_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
