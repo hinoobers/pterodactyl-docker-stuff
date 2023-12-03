@@ -17,14 +17,11 @@ RUN         apt update -y \
             
 RUN apt-get install -y chromium-browser
 
-RUN         useradd -m -d /home/container -s /bin/bash container
-USER        container
-ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
+USER container
+ENV  USER container
+ENV HOME /home/container
 
-STOPSIGNAL SIGINT
+WORKDIR /home/container
 
-COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
-RUN         chmod +x /entrypoint.sh
-ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
-CMD         ["/entrypoint.sh"]
+COPY        ./nginx/entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
