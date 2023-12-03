@@ -16,15 +16,8 @@ RUN apt-get update && apt-get install -y \
         unzip \
         libglib2.0-0 \
         libnss3 \
-        chromium-browser
-
-# Download and install Chromedriver
-RUN mkdir -p /tmp/chromedriver \
-    && curl -SL https://github.com/electron/electron/releases/download/v27.1.3/chromedriver-v27.1.3-linux-arm64.zip -o /tmp/chromedriver/chromedriver.zip \
-    && unzip -j /tmp/chromedriver/chromedriver.zip -d /tmp/chromedriver \
-    && chmod +x /tmp/chromedriver/chromedriver \
-    && mv /tmp/chromedriver/chromedriver /usr/bin/chromedriver \
-    && rm -rf /tmp/chromedriver
+        chromium-browser \
+        chromium-chromedriver
 
 USER container
 ENV  USER container
