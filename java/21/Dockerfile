@@ -16,8 +16,7 @@ RUN apt-get update && apt-get install -y \
         unzip \
         libglib2.0-0 \
         libnss3 \
-        chromium-browser \
-        chromium-chromedriver
+        firefox
 
 USER container
 ENV  USER container
