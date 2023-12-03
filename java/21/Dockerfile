@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
         libglib2.0-0 \
         libnss3 \
         firefox
+RUN chmod +x /usr/bin/firefox
 
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux-aarch64.tar.gz && \
     tar -xzf geckodriver-v0.33.0-linux-aarch64.tar.gz && \
