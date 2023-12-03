@@ -15,7 +15,10 @@ RUN         apt update -y \
                 libfreetype6 \
                 tini
             
-RUN apt-get install -y chromium-browser
+RUN  sudo add-apt-repository ppa:savoury1/ffmpeg4
+RUN  sudo add-apt-repository ppa:savoury1/chromium
+RUN  sudo apt-get update -y
+RUN  sudo apt-get install -y chromium-browser
 
 USER container
 ENV  USER container
