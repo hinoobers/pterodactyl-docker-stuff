@@ -1,7 +1,6 @@
 FROM --platform=$TARGETOS/$TARGETARCH eclipse-temurin:21-jdk-jammy
 
-RUN apt update -y \
-    && apt install -y \
+RUN apt-get update && apt-get install -y \
         curl \
         lsof \
         ca-certificates \
@@ -13,7 +12,8 @@ RUN apt update -y \
         tzdata \
         iproute2 \
         libfreetype6 \
-        tini
+        tini \
+        unzip
 
 # Download and install Chromedriver
 RUN mkdir -p /tmp/chromedriver \
