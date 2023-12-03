@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
         software-properties-common # Added for add-apt-repository
 
 RUN apt-get update && \
-    apt-get install -y firefox && \
+    apt-get install -y firefox-esr && \
     wget https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux-aarch64.tar.gz && \
     tar -xzf geckodriver-v0.33.0-linux-aarch64.tar.gz && \
     mv geckodriver /usr/bin/geckodriver && \
