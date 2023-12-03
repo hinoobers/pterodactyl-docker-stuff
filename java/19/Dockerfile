@@ -23,5 +23,5 @@ ENV HOME /home/container
 
 WORKDIR /home/container
 
-COPY        ./nginx/entrypoint.sh /entrypoint.sh
+COPY        ./java/entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
