@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
         iproute2 \
         libfreetype6 \
         tini \
-        unzip
+        unzip \
+        libglib2.0-0
 
 # Download and install Chromedriver
 RUN mkdir -p /tmp/chromedriver \
