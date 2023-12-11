@@ -9,10 +9,6 @@ RUN apt update \
 # Install necessary PHP extensions
 RUN apt -y install php8.1-mysql php8.1-mbstring php8.1-xml
 
-# Set up PHP session directory and permissions
-RUN mkdir -p /var/lib/php/sessions \
-    && chown -R www-data:www-data /var/lib/php/sessions
-
 USER container
 ENV USER container
 ENV HOME /home/container
