@@ -8,6 +8,8 @@ RUN         apt-get update \
             && useradd -m -d /home/container container \
             && locale-gen en_US.UTF-8
 
+RUN         npm install typescript ts-node @types/node --location=global   
+
 ENV         LC_ALL=en_US.UTF-8
 ENV         LANG=en_US.UTF-8
 ENV         LANGUAGE=en_US.UTF-8
