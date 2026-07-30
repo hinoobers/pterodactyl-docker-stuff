@@ -1,7 +1,7 @@
 FROM        node:22-bullseye-slim
 
 RUN         apt-get update \
-            && apt-get -y install --no-install-recommends curl ffmpeg iproute2 git sqlite3 python3 python3-pip tzdata ca-certificates dnsutils build-essential locales default-jre \
+            && apt-get -y install --no-install-recommends curl ffmpeg iproute2 git sqlite3 python3 python3-pip python3-venv tzdata ca-certificates dnsutils build-essential locales default-jre \
             && pip3 install --no-cache-dir yt-dlp \
             && npm -g install npm@latest \
             && apt-get clean \
