@@ -1,4 +1,4 @@
-FROM eclipse-temurin:8u312-b07-jdk-focal
+FROM eclipse-temurin:8-jdk-jammy
 
 RUN apt update \
     && apt install -y software-properties-common \
