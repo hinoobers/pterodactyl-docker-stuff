@@ -21,6 +21,8 @@ RUN apt-get update && apt-get install -y \
         libnss3 \
         software-properties-common \
         ffmpeg \
+        python3 \
+        python3-pip \
     && add-apt-repository -y ppa:mozillateam/ppa \
     && apt-get update \
     && apt-get install -y firefox-esr \
